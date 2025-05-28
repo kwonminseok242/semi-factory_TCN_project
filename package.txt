@@ -1,0 +1,3 @@
+please install packages below there
+
+pip install numpy pandas matplotlib scikit-learn torch

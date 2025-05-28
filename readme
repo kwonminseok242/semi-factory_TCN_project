@@ -1,0 +1,35 @@
+semiconductor_tcn_project
+|
+|–– data                            # 센서 데이터 (원본/전처리)
+|   |–– T_data.csv        # 기존 데이터
+|   |–– T_f_data.csv                    # 상관관계 분석후 feature 제거 데이터
+|   |–– T_f_t.csv                       # collection_date + collection_time = datetime merged 코드
+|   |–– T_f_t_d.csv
+|   |–– V_data.csv        # 기존 데이터
+|   |–– V_f_data.csv                    # 상관관계 분석후 feature 제거 데이터
+|   |–– V_f_t.csv                       # collection_date + collection_time = datetime merged 코드
+|   |–– V_f_t_d.csv
+|–– notebooks                       # EDA, 모델링 노트북
+|   |–– T_data_preprovess.ipynb           # 데이터 전처리(상관관계분석,,,등)
+|   |–– V_data_preprovess.ipynb 
+|–– src
+|   |–– model.py                        # TCN 구현
+|   |–– train.py                        # 학습 루프
+|   |–– evaluate.py                     # 테스트/시각화
+|   |–– sliding_window.py
+|   |–– T_sliding_window.py    
+|   |–– V_sliding_window.py
+|   |–– tcn_model_best.pth
+|
+|–– results                         # 결과 이미지, 모델 저장
+|   |–– tcn_model.pth
+|   |–– X_windows.npy  
+|   |–– y_labels.npy
+|   |–– VX_windows.npy  
+|   |–– Vy_labels.npy
+|
+|–– readme
+
+
+#필요한 패키지
+pip install numpy pandas matplotlib scikit-learn torch
