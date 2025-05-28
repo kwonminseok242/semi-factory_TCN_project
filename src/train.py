@@ -41,13 +41,13 @@ dataset = SequenceDataset(X, y)
 train_loader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
 
 # ---------------------- 클래스 가중치 직접 입력 ---------------------- #
-class_weights = [1.0, 3.895926805322783, 1.0, 1.0]
-weights_tensor = torch.tensor(class_weights, dtype=torch.float32).to(DEVICE)
+# class_weights = [1.0, 3.895926805322783, 1.0, 1.0]
+# weights_tensor = torch.tensor(class_weights, dtype=torch.float32).to(DEVICE)
 
 # ---------------------- 모델 정의 ---------------------- #
 model = TCN(input_size=NUM_FEATURES,
             output_size=NUM_CLASSES,
-            num_channels=[32, 64, 128, 128],
+            num_channels=[32, 64, 64, 64],
             kernel_size=7,
             dropout=0.101497).to(DEVICE)
 
